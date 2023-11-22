@@ -21,14 +21,14 @@ class OneToHundredStream extends Readable {
 class InverseNumberStream extends Transform {
     _transform(chunk, encoding, callback) {
         const transformed = Number(chunk.toString()) * -1
-        callback(null, Buffer.from(String(transformed)));
+        callback(null, Buffer.from(String(transformed)))
     }
 }
 
 class MultiplyByTenStream extends Writable {
     _write(chunk, encoding, callback) {
-        console.log(Number(chunk.toString()) * 10);
-        callback();
+        console.log(Number(chunk.toString()) * 10)
+        callback()
     }
 }
 
